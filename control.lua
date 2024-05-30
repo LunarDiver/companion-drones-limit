@@ -3,7 +3,7 @@ script.on_event(defines.events.on_pre_build, function(data)
     if player == nil then return end
 
     local item = player.cursor_stack
-    if item == nil then return elseif item.name ~= "companion" and item.name ~= "companion-mk2" then return end
+    if item == nil then return elseif item.valid_for_read == false then return elseif item.name ~= "companion" and item.name ~= "companion-mk2" then return end
 
     local surface = player.surface
 
@@ -22,7 +22,7 @@ script.on_event(defines.events.on_pre_build, function(data)
 
     if count >= max_count then
         item.clear()
-        player.print("Only 4 companions are allowed at a time!")
+        player.print({ "cdl-strings.warning-player", max_count })
     end
 end)
 
@@ -46,6 +46,6 @@ script.on_event(defines.events.on_robot_built_entity, function(data)
         data.created_entity.die()
         local last_user = data.robot.last_user
         if last_user == nil then return end
-        last_user.print("A robot just placed a companion while the limit of 4 was already reached!")
+        last_user.print({ "cdl-strings.warning-robot", max_count })
     end
 end)
