@@ -1,0 +1,13 @@
+{
+    "name": "companion-drones-limit",
+    "version": "0.1.0",
+    "title": "Companion Drones Limit",
+    "description": "Adds a fixed limit to the amount of companion drones existing at once to stop them from being overpowered.",
+    "author": "Lunardiver",
+    "contact": "dev@lunardiver.com",
+    "factorio_version": "1.1",
+    "dependencies": [
+        "base",
+        "Companion_Drones-flux >= 1.0.29"
+    ]
+}
