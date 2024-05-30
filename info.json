@@ -1,6 +1,6 @@
 {
     "name": "companion-drones-limit",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "title": "Companion Drones Limit",
     "description": "Adds a fixed limit to the amount of companion drones existing at once to stop them from being overpowered.",
     "author": "Lunardiver",
