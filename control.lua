@@ -10,7 +10,7 @@ script.on_event(defines.events.on_pre_build, function(data)
     local existing_companions = surface.find_entities_filtered { name = "companion" }
     local existing_companions_mk2 = surface.find_entities_filtered { name = "companion-mk2" }
     local count = 0
-    local max_count = 4
+    local max_count = settings.global["cdl-limit"].value
     for _, entity in ipairs(existing_companions) do
         count = count + 1
         if count > max_count then entity.die() end
@@ -34,7 +34,7 @@ script.on_event(defines.events.on_robot_built_entity, function(data)
     local existing_companions = surface.find_entities_filtered { name = "companion" }
     local existing_companions_mk2 = surface.find_entities_filtered { name = "companion-mk2" }
     local count = 0
-    local max_count = 4
+    local max_count = settings.global["cdl-limit"].value
     for _, _ in ipairs(existing_companions) do
         count = count + 1
     end
