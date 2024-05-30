@@ -9,6 +9,7 @@
     "dependencies": [
         "base",
         "? Companion_Drones >= 1.0.25",
-        "? Companion_Drones-flux >= 1.0.29"
+        "? Companion_Drones-flux >= 1.0.29",
+        "? companion-drones-rebalanced >= 0.0.8"
     ]
 }
